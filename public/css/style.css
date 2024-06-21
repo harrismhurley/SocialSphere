@@ -15,13 +15,13 @@ body {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Add some space between elements */
+  gap: 10px; 
 }
 
 .formHeader {
-  width: 530px; /* Match the width of the formContainer */
+  width: 530px; 
   
-  text-align: center; /* Center the text in the header */
+  text-align: center;
   background-color: var(--primary-color);
   color: white;
   padding: 10px;
@@ -66,7 +66,6 @@ body {
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border: 5px solid var(--primary-color);
-  border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
   background-color: white;
   margin: 0;
 }
