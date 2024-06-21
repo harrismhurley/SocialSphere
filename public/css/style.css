@@ -11,6 +11,51 @@ body {
   background-color: var(--background);
 }
 
+
+/* post styles */
+.postHeader {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  width: 90%; /* Increased width */
+  max-width: 800px; /* Increased max-width */
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.postTitle {
+  margin: 0;
+  padding-left: 10px;
+}
+
+.postDate {
+  margin: 0;
+}
+
+.postWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.postContainer {
+  width: 90%; /* Increased width */
+  max-width: 800px; /* Increased max-width */
+  padding: 20px; /* Added padding value */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 5px solid var(--primary-color);
+  background-color: white;
+  margin: 0;
+  box-sizing: border-box; 
+}
+
+
+
+
 /* form styles */
 .form {
   display: flex;
@@ -20,7 +65,6 @@ body {
 
 .formHeader {
   width: 530px; 
-  
   text-align: center;
   background-color: var(--primary-color);
   color: white;
