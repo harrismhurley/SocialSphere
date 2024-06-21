@@ -1,11 +1,81 @@
 :root {
   --primary-color: rgb(49, 49, 49);
-  --secondary-color:#6495ED;
+  --secondary-color: #6495ED;
+  --background: #d6d1d1;
 }
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+}
+
+/* form styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Add some space between elements */
+}
+
+.formHeader {
+  width: 530px; /* Match the width of the formContainer */
+  
+  text-align: center; /* Center the text in the header */
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+}
+
+.field {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.submitBtn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+
+.signupBtn:hover {
+  background-color: var(--secondary-color);
+}
+
+.centerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.formContainer {
+  width: 70%;
+  max-width: 500px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 5px solid var(--primary-color);
+  border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+  background-color: white;
+  margin: 0;
+}
+
+
 
 /* nav styles */
 .navTitle {
-  background-color: var(--secondary-color); /* Use CSS variable */
+  background-color: var(--secondary-color);
   padding: 10px;
   margin: 15px;
   margin-left: 40px;
@@ -14,10 +84,9 @@
   display: inline-block;
   border-radius: 15px;
   box-shadow: 4px 4px 8px rgb(0, 120, 255);
-  
+
 }
 
-/* Rest of your existing styles */
 .techLogo {
   font-size: 24px;
   color: white;
