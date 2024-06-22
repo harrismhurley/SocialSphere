@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { Post, User } = require("../models");
 
+
 router.get("/", async (req, res) => {
   try {
     const postData = await Post.findAll({
@@ -24,7 +25,6 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/");
@@ -34,6 +34,20 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+// Route for rendering the dashboard page
+router.get("/dash", (req, res) => {
+  if (!req.session.logged_in) {
+    res.redirect("/login");
+    return;
+  }
+
+  res.render("dash", {
+    logged_in: req.session.logged_in,
+    current_user_id: req.session.user_id,
+  });
+});
+
+// Route for rendering the signup page
 router.get("/signup", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/");
