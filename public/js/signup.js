@@ -1,18 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOM fully loaded and parsed'); // Log when DOM is fully loaded
 
   const signupForm = document.getElementById('signup-form');
 
   if (signupForm) {
-    console.log('Signup form found'); // Log when signup form is found
     signupForm.addEventListener('submit', async (event) => {
       event.preventDefault();
 
       const usernameInput = document.getElementById('username');
       const passwordInput = document.getElementById('password');
-
-      console.log('Username input value:', usernameInput.value); // Log username input value
-      console.log('Password input value:', passwordInput.value); // Log password input value
 
       const username = usernameInput.value.trim();
       const password = passwordInput.value.trim();
@@ -37,7 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     });
-  } else {
-    console.error('Signup form not found'); // Log if signup form is not found
-  }
+  } 
 });

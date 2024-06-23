@@ -1,18 +1,22 @@
-{{!-- post sample --}}
-<div class="postWrapper">
-
-    {{!-- top part --}}
-    <div class="postHeader">
+{{#if posts.length}}
+  {{#each posts}}
+    {{!-- post sample --}}
+    <div class="postWrapper">
+  
+      {{!-- top part --}}
+      <div class="postHeader">
         <div class="postTitle">
-            <h1>Post Title</h1>
+          <h1>{{title}}</h1>
         </div>
         <div class="postDate">
-            <p>Posted by Author on x/x/xxxx</p>
+          <p>Posted by {{user.username}} on {{format_date createdAt}}</p>
         </div>
+      </div>
+  
+      {{!-- post body --}}
+      <div class="postContainer">
+        <h2 class="postContent">{{content}}</h2>
+      </div>
     </div>
-
-    {{!-- post body --}}
-    <div class="postContainer">
-        <h2 class="postContent">post content</h2>
-    </div>
-</div>
+  {{/each}}
+{{/if}}
