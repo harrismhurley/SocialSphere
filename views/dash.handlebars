@@ -1,0 +1,36 @@
+<div class="dashPostWrapper">
+
+    {{!-- top part --}}
+    <div class="dashPostHeader">
+        <div class="dashPostTitle">
+            <h1>Post Title</h1>
+        </div>
+        <div class="postDate">
+            <p>Posted by Author on x/x/xxxx</p>
+        </div>
+    </div>
+</div>
+
+
+{{!-- container with form and button --}}
+<div class="container">
+    <div id="addPostWrapper" class="addPostWrapper" style="display: none;">
+        <div class="addPostHeader">
+            <h1>Create Post</h1>
+        </div>
+        <div class="addPostContainer">
+            <form id="post-form" class="form">
+                <div class="field">
+                    <input class="input" type="text" name="postTitle" placeholder="Title" />
+                </div>
+                <div class="field">
+                    <input class="input" type="text" name="postContent" placeholder="Content" />
+                </div>
+                <button type="submit" class="createPostBtn">Create Post</button>
+            </form>
+        </div>
+    </div>
+    <button id="toggleAddPostBtn" class="addPostBtn">Add Post</button>
+</div>
+
+<script src="js/addPost.js"></script>

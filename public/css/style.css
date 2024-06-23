@@ -75,6 +75,10 @@ body {
   width: 100%;
 }
 
+.field p {
+margin: 0;
+}
+
 .input {
   width: 100%;
   padding: 10px;
@@ -160,4 +164,125 @@ body {
 
 .nav-link:hover {
   color: var(--secondary-color);
+}
+
+
+/* Dash styles */
+.container {
+  position: relative;
+  height: 70vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hide addPostWrapper by default */
+.addPostWrapper {
+  display: none;
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  top: 20%;
+  padding: 0; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 5px solid var(--primary-color);
+  background-color: white;
+}
+
+/* Ensure addPostHeader and addPostContainer have consistent width */
+.addPostHeader,
+.addPostContainer {
+  width: 100%;
+}
+
+.addPostHeader {
+  background-color: var(--primary-color);
+  padding-top: 5px;
+  color: white;
+}
+
+/* Styles for the button */
+.addPostBtn {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  bottom: 10px;
+}
+
+.addPostBtn:hover {
+  background-color: var(--secondary-color);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.field {
+  width: 100%;
+}
+
+.field p {
+  margin: 0;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#post-form {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.createPostBtn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+
+}
+
+.createPostBtn:hover {
+  background-color: var(--secondary-color);
+}
+
+.dashPostWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.dashPostHeader {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  width: 90%; /* Increased width */
+  max-width: 800px; /* Increased max-width */
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.dashPostHeader:hover {
+  cursor: pointer;
+}
+.dashPostTitle h1{
+  font-size: medium;
 }
