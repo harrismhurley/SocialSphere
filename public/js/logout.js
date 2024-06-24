@@ -1,17 +1,22 @@
-document.querySelector("#logout").addEventListener("click", async () => {
-  try {
-    const response = await fetch("/api/users/logout", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-    });
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM fully loaded and parsed');
 
-    if (response.ok) {
-      document.location.replace("/");
-    } else {
-      alert("Failed to log out.");
-    }
-  } catch (error) {
-    console.error('Error logging out:', error);
-    alert("Failed to log out.");
-  }
+  // Event listener for logout
+  document.getElementById('logout').addEventListener('click', async (event) => {
+      event.preventDefault();
+      console.log('Logout button clicked');
+      
+      const response = await fetch('/api/users/logout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+      });
+
+      if (response.ok) {
+          console.log('Logged out successfully');
+          document.location.replace('/');
+      } else {
+          console.error('Failed to log out');
+          alert('Failed to log out.');
+      }
+  });
 });

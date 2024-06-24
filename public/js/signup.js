@@ -1,36 +1,31 @@
-document.addEventListener('DOMContentLoaded', () => {
+document
+  .getElementById("signup-form")
+  .addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-  const signupForm = document.getElementById('signup-form');
+    const username = document
+      .querySelector('input[name="username"]')
+      .value.trim();
+    const password = document
+      .querySelector('input[name="password"]')
+      .value.trim();
 
-  if (signupForm) {
-    signupForm.addEventListener('submit', async (event) => {
-      event.preventDefault();
+    if (username && password) {
+      const response = await fetch("/api/users/signup", {
+        method: "POST",
+        body: JSON.stringify({ username, password }),
+        headers: { "Content-Type": "application/json" },
+      });
 
-      const usernameInput = document.getElementById('username');
-      const passwordInput = document.getElementById('password');
-
-      const username = usernameInput.value.trim();
-      const password = passwordInput.value.trim();
-
-      if (username && password) {
-        try {
-          const response = await fetch('/api/users/signup', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username, password }),
-          });
-
-          if (response.ok) {
-            document.location.replace('/dash');
-          } else {
-            const errorMessage = await response.json();
-            alert(`Failed to sign up: ${errorMessage.error}`);
-          }
-        } catch (error) {
-          console.error('Error signing up:', error);
-          alert('Failed to sign up');
+      if (response.ok) {
+        document.location.replace("/");
+      } else {
+        const result = await response.json();
+        if (result.message === "Username already exists") {
+          alert("Username already exists. Please choose a different username.");
+        } else {
+          alert("Failed to sign up.");
         }
       }
-    });
-  } 
-});
+    }
+  });
