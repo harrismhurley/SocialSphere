@@ -15,10 +15,12 @@ body {
 /* post styles */
 .postHeader {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
   align-items: center;
-  width: 90%; /* Increased width */
-  max-width: 800px; /* Increased max-width */
+  width: 90%;
+  /* Increased width */
+  max-width: 800px;
+  /* Increased max-width */
   background-color: var(--primary-color);
   color: white;
   padding: 10px;
@@ -44,14 +46,17 @@ body {
 }
 
 .postContainer {
-  width: 90%; /* Increased width */
-  max-width: 800px; /* Increased max-width */
-  padding: 20px; /* Added padding value */
+  width: 90%;
+  /* Increased width */
+  max-width: 800px;
+  /* Increased max-width */
+  padding: 20px;
+  /* Added padding value */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border: 5px solid var(--primary-color);
   background-color: white;
   margin: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 
@@ -61,11 +66,11 @@ body {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .formHeader {
-  width: 530px; 
+  width: 530px;
   text-align: center;
   background-color: var(--primary-color);
   color: white;
@@ -77,7 +82,7 @@ body {
 }
 
 .field p {
-margin: 0;
+  margin: 0;
 }
 
 .input {
@@ -171,7 +176,7 @@ margin: 0;
 /* Dash styles */
 .container {
   position: relative;
-  height: 70vh; 
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -185,7 +190,7 @@ margin: 0;
   max-width: 500px;
   position: absolute;
   top: 20%;
-  padding: 0; 
+  padding: 0;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border: 5px solid var(--primary-color);
   background-color: white;
@@ -223,7 +228,7 @@ margin: 0;
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .field {
@@ -246,6 +251,7 @@ margin: 0;
   padding-left: 10px;
   padding-right: 10px;
 }
+
 .createPostBtn {
   padding: 10px;
   border: none;
@@ -271,19 +277,78 @@ margin: 0;
 
 .dashPostHeader {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
   align-items: center;
-  width: 90%; /* Increased width */
-  max-width: 800px; /* Increased max-width */
+  width: 90%;
+  /* Increased width */
+  max-width: 800px;
+  /* Increased max-width */
   background-color: var(--primary-color);
   color: white;
   padding: 10px;
   box-sizing: border-box;
   border-radius: 10px;
 }
+
 .dashPostHeader:hover {
   cursor: pointer;
 }
-.dashPostTitle h1{
+
+.dashPostTitle h1 {
   font-size: medium;
+}
+
+/* comment styles */
+.comment-input {
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.submitCommentBtn {
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+
+.submitCommentBtn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* comment styles */
+/* Add a border around the comments section */
+.commentsSection {
+  border: 2px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Style the comment list items */
+.commentItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.commentItem p {
+  margin: 0;
+}
+
+.commentItem p:first-child {
+  flex: 1;
+}
+
+.commentItem p:last-child {
+  text-align: right;
+  color: #555;
+}
+
+.commentList{
+  padding: 0;
 }
