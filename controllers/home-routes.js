@@ -22,12 +22,17 @@ router.get('/', async (req, res) => {
 
     console.log('Fetched posts with comments:', posts); // Add console log here to inspect the structure
 
-    res.render('home', { posts }); // Render the posts to your Handlebars template
+    res.render('home', { 
+      posts,
+      logged_in: req.session.logged_in, // Pass the logged_in state to the template
+      current_user_id: req.session.user_id // Pass the current user ID to the template
+    });
   } catch (err) {
     console.error('Error fetching posts:', err);
     res.status(500).json({ error: 'Failed to fetch posts' });
   }
 });
+
 
 // Route for rendering the dashboard page
 router.get("/dash", async (req, res) => {
