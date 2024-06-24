@@ -1,22 +1,47 @@
 {{#if posts.length}}
-  {{#each posts}}
-    {{!-- post sample --}}
-    <div class="postWrapper">
-  
-      {{!-- top part --}}
-      <div class="postHeader">
-        <div class="postTitle">
-          <h1>{{title}}</h1>
-        </div>
-        <div class="postDate">
-          <p>Posted by {{user.username}} on {{format_date createdAt}}</p>
-        </div>
-      </div>
-  
-      {{!-- post body --}}
-      <div class="postContainer">
-        <h2 class="postContent">{{content}}</h2>
-      </div>
+{{#each posts}}
+<div class="postWrapper" data-post-id="{{id}}">
+  <div class="postHeader">
+    <div class="postTitle">
+      <h1>{{title}}</h1>
     </div>
-  {{/each}}
+    <div class="postDate">
+      <p>Posted by {{this.user.username}} on {{format_date createdAt}}</p>
+    </div>
+  </div>
+  <div class="postContainer">
+    <h2 class="postContent">{{content}}</h2>
+
+    <!-- Comment Form -->
+    <div class="commentForm" style="display: none;">
+      <form class="commentForm" data-post-id="{{id}}">
+        <div class="field">
+          <input class="input comment-input" type="text" name="commentText" placeholder="Add a comment" />
+        </div>
+        <button type="submit" class="submitCommentBtn">Add Comment</button>
+      </form>
+    </div>
+
+    <!-- Comments Section -->
+    <div class="commentsSection">
+      {{#if comments.length}}
+      <ul class="commentList">
+        {{#each comments}}
+        <li class="commentItem">
+          <p>{{comment_text}}</p>
+          <p>Commented by {{this.user.username}} on {{format_date createdAt}}</p>
+        </li>
+        {{/each}}
+      </ul>
+      {{else}}
+      <p>No comments yet.</p>
+      {{/if}}
+    </div>
+  </div>
+</div>
+{{/each}}
+{{else}}
+<p>No posts available.</p>
 {{/if}}
+
+<script src="/js/comment.js"></script>
