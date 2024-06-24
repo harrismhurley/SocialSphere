@@ -12,15 +12,16 @@ body {
 }
 
 
+
+
+
 /* post styles */
 .postHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  /* Increased width */
   max-width: 800px;
-  /* Increased max-width */
   background-color: var(--primary-color);
   color: white;
   padding: 10px;
@@ -47,17 +48,15 @@ body {
 
 .postContainer {
   width: 90%;
-  /* Increased width */
   max-width: 800px;
-  /* Increased max-width */
   padding: 20px;
-  /* Added padding value */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border: 5px solid var(--primary-color);
   background-color: white;
   margin: 0;
   box-sizing: border-box;
 }
+
 
 
 
@@ -126,6 +125,9 @@ body {
 
 
 
+
+
+
 /* nav styles */
 .navTitle {
   background-color: var(--secondary-color);
@@ -137,7 +139,6 @@ body {
   display: inline-block;
   border-radius: 15px;
   box-shadow: 4px 4px 8px rgb(0, 120, 255);
-
 }
 
 .techLogo {
@@ -173,19 +174,20 @@ body {
 }
 
 
+
+
+
 /* Dash styles */
 .container {
   position: relative;
-  height: 70vh;
+  height: 67vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* Hide addPostWrapper by default */
 .addPostWrapper {
-  display: none;
   width: 100%;
   max-width: 500px;
   position: absolute;
@@ -196,32 +198,36 @@ body {
   background-color: white;
 }
 
-/* Ensure addPostHeader and addPostContainer have consistent width */
-.addPostHeader,
-.addPostContainer {
-  width: 100%;
-}
-
 .addPostHeader {
   background-color: var(--primary-color);
-  padding-top: 5px;
   color: white;
+  padding: 5px 0;
 }
 
-/* Styles for the button */
-.addPostBtn {
+.addPostContainer {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.addPostBtn, .dashBtn {
   padding: 15px;
-  border: none;
   border-radius: 5px;
-  background-color: var(--primary-color);
-  color: white;
+  border: none;
   cursor: pointer;
   font-size: 16px;
+}
+
+.addPostBtn {
   position: absolute;
   bottom: 10px;
 }
 
-.addPostBtn:hover {
+.dashBtn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.dashBtn:hover {
   background-color: var(--secondary-color);
 }
 
@@ -248,23 +254,11 @@ body {
 }
 
 #post-form {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 10px;
 }
 
 .createPostBtn {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--primary-color);
-  color: white;
-  cursor: pointer;
   margin: 10px;
-
-}
-
-.createPostBtn:hover {
-  background-color: var(--secondary-color);
 }
 
 .dashPostWrapper {
@@ -280,23 +274,63 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  /* Increased width */
   max-width: 800px;
-  /* Increased max-width */
   background-color: var(--primary-color);
   color: white;
   padding: 10px;
   box-sizing: border-box;
   border-radius: 10px;
-}
-
-.dashPostHeader:hover {
   cursor: pointer;
 }
 
 .dashPostTitle h1 {
   font-size: medium;
 }
+
+.postActions {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.updateBtn,
+.deleteBtn,
+.returnBtn {
+  padding: 8px 16px;
+  margin: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.updateBtn {
+  background-color: #4CAF50;
+}
+
+.deleteBtn {
+  background-color: #f44336;
+}
+
+.returnBtn{
+  background-color: blue;
+}
+
+.dashBigPost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%; 
+  max-width: 800px; 
+  margin: 10px auto; 
+  padding: 20px;
+}
+
+
+
+
+
+
 
 /* comment styles */
 .comment-input {
@@ -319,15 +353,12 @@ body {
   background-color: var(--secondary-color);
 }
 
-/* comment styles */
-/* Add a border around the comments section */
 .commentsSection {
   border: 2px solid #ddd;
   padding: 10px;
   margin-top: 10px;
 }
 
-/* Style the comment list items */
 .commentItem {
   display: flex;
   justify-content: space-between;
@@ -349,6 +380,6 @@ body {
   color: #555;
 }
 
-.commentList{
+.commentList {
   padding: 0;
 }
