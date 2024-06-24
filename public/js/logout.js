@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOM fully loaded and parsed');
 
   // Event listener for logout
   document.getElementById('logout').addEventListener('click', async (event) => {
       event.preventDefault();
-      console.log('Logout button clicked');
       
       const response = await fetch('/api/users/logout', {
           method: 'POST',

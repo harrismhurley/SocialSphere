@@ -1,6 +1,6 @@
 {{#if posts.length}}
   {{#each posts}}
-    <div class="dashPostWrapper">
+    <div class="dashPostWrapper" data-post-id="{{id}}" data-post-content="{{content}}" data-post-username="{{this.user.username}}">
       {{!-- top part --}}
       <div class="dashPostHeader">
         <div class="dashPostTitle">
@@ -31,11 +31,14 @@
                 <div class="field">
                     <input id="postContent" class="input" type="text" name="postContent" placeholder="Content" />
                 </div>
-                <button type="submit" class="createPostBtn">Create Post</button>
+                <button type="submit" class="dashBtn createPostBtn">Create Post</button>
             </form>
         </div>
     </div>
-    <button id="toggleAddPostBtn" class="addPostBtn">Add Post</button>
+    <button id="toggleAddPostBtn" class="dashBtn addPostBtn">Add Post</button>
 </div>
 
 <script src="js/addPost.js"></script>
+<script src="js/updatePost.js"></script>
+<script src="js/deletePost.js"></script>
+<script src="js/dash.js"></script>

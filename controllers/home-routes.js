@@ -36,6 +36,7 @@ router.get('/', async (req, res) => {
 
 // Route for rendering the dashboard page
 router.get("/dash", async (req, res) => {
+  console.log("Inside /dash route");
   if (!req.session.logged_in) {
     res.redirect("/login");
     return;
@@ -56,6 +57,8 @@ router.get("/dash", async (req, res) => {
 
     const posts = postData.map((post) => post.get({ plain: true }));
 
+    console.log(posts); // Log posts data to check in console
+
     res.render("dash", {
       posts,
       logged_in: req.session.logged_in,
@@ -65,6 +68,8 @@ router.get("/dash", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
 
 // Example route handler to fetch posts
 router.get("/posts", async (req, res) => {
