@@ -24,19 +24,18 @@ The SocialSphere project is a full-stack web application designed to create a dy
 ## Installation
 To install this application, follow these steps:
 
-
 1. Clone the repository to your local machine using the command: `git@github.com:harrismhurley/SocialSphere.git`
-2. Navigate into the project directory:
+2. Navigate into the project directory
 3. Install dependencies using npm: 'npm i'
-4. Create the PostgreSQL database specified in your `.env` file.
+4. Create the PostgreSQL database specified in your `.env` file
 
 ## Usage
 To use this application, follow these steps:
 
 1. Start the application: `node server.js`
-2. Open your web browser and navigate to `http://localhost:3000`.
-3. Register a new user account or log in with existing credentials.
-4. Explore existing posts, add new posts, update or delete posts as needed.
+2. Open your web browser and navigate to `http://localhost:3000`
+3. Register a new user account or log in with existing credentials
+4. Explore existing posts, add new posts, update or delete posts as needed
 5. Engage with posts by adding comments.
 
 ## Credits
@@ -45,16 +44,16 @@ N/A
 
 ## Features
 
-- User Authentication: Secure user registration and login functionality.
-- Post Management: Create, update, and delete posts with ease.
-- Comment System: Engage with posts by adding comments.
-- Session Management: Manage user sessions securely with Express.js and Sequelize.
-- Responsive Design: Ensures optimal viewing experience across devices.
-- Dependency Management: Utilizes npm for managing project dependencies.
-- Database Integration: Seamless integration with PostgreSQL database using Sequelize ORM.
-- Error Handling: Robust error handling to ensure smooth user experience.
-- Password Hashing: Utilizes bcrypt for secure password hashing.
-- Dynamic Templating: Implements Handlebars for dynamic HTML templating.
+- User Authentication: Secure user registration and login functionality
+- Post Management: Create, update, and delete posts with ease
+- Comment System: Engage with posts by adding comments
+- Session Management: Manage user sessions securely with Express.js and Sequelize
+- Responsive Design: Ensures optimal viewing experience across devices
+- Dependency Management: Utilizes npm for managing project dependencies
+- Database Integration: Seamless integration with PostgreSQL database using Sequelize ORM
+- Error Handling: Robust error handling to ensure smooth user experience
+- Password Hashing: Utilizes bcrypt for secure password hashing
+- Dynamic Templating: Implements Handlebars for dynamic HTML templating
 
 ## Dependencies
 
