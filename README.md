@@ -8,7 +8,7 @@ The SocialSphere project is a full-stack web application designed to create a dy
 
 ## Deployed Application URL
 
-[Social Sphere](https://socialsphere-8syw.onrender.com)
+[Social Sphere](https://socialsphere-63b8.onrender.com)
 
 ## Table of Contents
 * [Installation](#installation)
