@@ -2,8 +2,7 @@ require("dotenv").config();
 
 const { Sequelize } = require("sequelize");
 
-const sequelize = new Sequelize('postgresql://challenge_deploy_user:qVDwatUOLM7ZJ1cHUecY8j8lvwzueYHY@dpg-cpvpfqaju9rs73aip3a0-a/challenge_deploy') // Example for postgres
-
+const sequelize = new Sequelize('postgresql://challenge_deploy_user:qVDwatUOLM7ZJ1cHUecY8j8lvwzueYHY@dpg-cpvpfqaju9rs73aip3a0-a/challenge_deploy')
 
 // console.log('DB_URL:', process.env.DB_URL);
 // console.log('DB_NAME:', process.env.DB_NAME);
@@ -26,4 +25,4 @@ const sequelize = new Sequelize('postgresql://challenge_deploy_user:qVDwatUOLM7Z
 //   );
 // }
 
-// module.exports = sequelize;
+module.exports = sequelize;
